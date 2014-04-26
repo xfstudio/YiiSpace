@@ -55,6 +55,9 @@ $config = [
             'class' => 'modules\test\Module',
 
         ],
+        'user' => [
+            'class' => 'modules\user\Module',
+        ],
     ],
 
 

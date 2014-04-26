@@ -47,6 +47,15 @@ $config = [
             ],
         ],
 
+        // 公共资源管理器
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    //  'sourcePath' => null,
+                ],
+            ],
+        ],
+
     ],
 
     'modules' => [
