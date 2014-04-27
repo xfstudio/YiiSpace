@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "acdadb62f0a0923d183746c080e45662",
+    "hash": "546d72477296b22eb739c8b760617fcd",
     "packages": [
         {
             "name": "amnah/yii2-user",
@@ -392,12 +392,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "e0d1e406d361ac0ed8b9df60f52e14d39fceb084"
+                "reference": "d66a15154efbe3ee239846f93c60189bac5808e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e0d1e406d361ac0ed8b9df60f52e14d39fceb084",
-                "reference": "e0d1e406d361ac0ed8b9df60f52e14d39fceb084",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/d66a15154efbe3ee239846f93c60189bac5808e3",
+                "reference": "d66a15154efbe3ee239846f93c60189bac5808e3",
                 "shasum": ""
             },
             "type": "library",
@@ -432,7 +432,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-04-25 02:16:09"
+            "time": "2014-04-27 01:41:25"
         },
         {
             "name": "yiisoft/jquery",
@@ -489,12 +489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "0b4f976f1efb280333f62e4a276929ac121a669e"
+                "reference": "be4729e1dcd1cb2ed272a701529e98a575d95b18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/0b4f976f1efb280333f62e4a276929ac121a669e",
-                "reference": "0b4f976f1efb280333f62e4a276929ac121a669e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/be4729e1dcd1cb2ed272a701529e98a575d95b18",
+                "reference": "be4729e1dcd1cb2ed272a701529e98a575d95b18",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +559,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-04-26 11:03:08"
+            "time": "2014-04-27 00:25:48"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -859,6 +859,49 @@
                 "yii2"
             ],
             "time": "2014-04-23 23:36:56"
+        },
+        {
+            "name": "yiisoft/yii2-jui",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-jui.git",
+                "reference": "da78d6858e342dbd7f7dbcbdf3fac0ef4ef21fcd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/da78d6858e342dbd7f7dbcbdf3fac0ef4ef21fcd",
+                "reference": "da78d6858e342dbd7f7dbcbdf3fac0ef4ef21fcd",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii\\jui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "The Jquery UI extension for the Yii framework",
+            "keywords": [
+                "jQuery UI",
+                "renderer",
+                "yii2"
+            ],
+            "time": "2014-04-23 01:25:11"
         }
     ],
     "aliases": [

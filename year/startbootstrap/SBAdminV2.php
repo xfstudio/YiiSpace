@@ -8,6 +8,7 @@
 
 namespace year\startBootstrap;
 
+use yii\web\View ;
 use yii\web\AssetBundle;
 
 class SBAdminV2 extends AssetBundle
@@ -25,6 +26,11 @@ class SBAdminV2 extends AssetBundle
        //  'js/bootstrap.min.js',
         'js/plugins/metisMenu/jquery.metisMenu.js',
         'js/sb-admin.js',
+    ];
+
+
+    public $jsOptions = [
+        'position' => View::POS_HEAD,
     ];
 
     /**

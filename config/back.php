@@ -13,6 +13,10 @@ $config = [
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
 
     'components' => [
+        'urlManager' => [
+            'enableStrictParsing' => true,
+        ],
+
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -59,11 +63,7 @@ $config = [
     ],
 
     'modules' => [
-        'test' => [
 
-            'class' => 'modules\test\Module',
-
-        ],
     ],
 
 

@@ -108,6 +108,8 @@ class WebApplicationEndBehavior extends Behavior
         $appOrModule->controllerNamespace = str_replace('\controllers', sprintf('\controllers\%s',$appEnd),$appOrModule->controllerNamespace);
 
         $appOrModule->viewPath .= DIRECTORY_SEPARATOR.$this->_endName;
+
+        // die( $appOrModule->controllerNamespace) ;
         /*
         if($appOrModule instanceof Application){
             echo $appOrModule->getViewPath() ;
