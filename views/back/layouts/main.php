@@ -40,12 +40,12 @@ NavBar::begin([
     'brandUrl' => Yii::$app->homeUrl,
     'options' => [
         'class' => 'navbar navbar-default navbar-fixed-top',
-        'role'=>'navigation',
-        'style'=>'margin-bottom: 0',
+        'role' => 'navigation',
+        'style' => 'margin-bottom: 0',
     ],
-    'renderInnerContainer'=>false,
-    'containerOptions'=>[
-        'class'=>'test',
+    'renderInnerContainer' => false,
+    'containerOptions' => [
+        'class' => 'test',
     ]
 ]); ?>
 <div class="navbar-header">
@@ -56,14 +56,19 @@ NavBar::begin([
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
-    <?=  Yii::$app->user->identity->username  ?>
+    <?= Yii::$app->user->identity->username ?>
 </div>
 <!-- /.navbar-header -->
 
 <ul class="nav navbar-top-links navbar-right">
+<li>
+    <?= Html::a(' 创建后台菜单',['/menu-builder'],['class'=>'','target'=>'_blank']) ?>
+
+</li>
+
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-messages">
         <li>
@@ -114,7 +119,7 @@ NavBar::begin([
 <!-- /.dropdown -->
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-tasks">
         <li>
@@ -124,8 +129,10 @@ NavBar::begin([
                         <strong>Task 1</strong>
                         <span class="pull-right text-muted">40% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                             <span class="sr-only">40% Complete (success)</span>
                         </div>
                     </div>
@@ -140,8 +147,10 @@ NavBar::begin([
                         <strong>Task 2</strong>
                         <span class="pull-right text-muted">20% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                             <span class="sr-only">20% Complete</span>
                         </div>
                     </div>
@@ -156,8 +165,10 @@ NavBar::begin([
                         <strong>Task 3</strong>
                         <span class="pull-right text-muted">60% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                             <span class="sr-only">60% Complete (warning)</span>
                         </div>
                     </div>
@@ -172,8 +183,10 @@ NavBar::begin([
                         <strong>Task 4</strong>
                         <span class="pull-right text-muted">80% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                             <span class="sr-only">80% Complete (danger)</span>
                         </div>
                     </div>
@@ -193,7 +206,7 @@ NavBar::begin([
 <!-- /.dropdown -->
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-alerts">
         <li>
@@ -253,7 +266,7 @@ NavBar::begin([
 <!-- /.dropdown -->
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-user">
         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -262,7 +275,7 @@ NavBar::begin([
         </li>
         <li class="divider"></li>
         <li>
-            <?= Html::a('<i class="fa fa-sign-out fa-fw"></i> 退出',['/site/logout'],['class'=>'']) ?>
+            <?= Html::a('<i class="fa fa-sign-out fa-fw"></i> 退出', ['/site/logout'], ['class' => '']) ?>
         </li>
     </ul>
     <!-- /.dropdown-user -->
@@ -380,6 +393,30 @@ NavBar::begin([
 
 
 <div id="page-wrapper">
+    <?= $content ?>
+    <?= year\widgets\IFrameAutoHeight::widget() ?>
+    <script type="text/javascript">
+        $(function () {
+            $('iframe').iframeAutoHeight(
+                {
+                    debug: true
+                }
+            );
+        });
+    </script>
+    <iframe
+        name="contentFrame"
+        id="contentFrame"
+        src="<?= \yii\helpers\Url::to(array('site/index')) ?>"
+        width="100%"
+        height="800px"
+        scrolling="no"
+        >
+    </iframe>
+
+
+
+    <?php /* ?>
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Blank</h1>
@@ -389,6 +426,9 @@ NavBar::begin([
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
+    <?php  */
+    ?>
+
 </div>
 <!-- /#page-wrapper -->
 

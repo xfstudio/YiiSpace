@@ -23,7 +23,9 @@
 		"yiisoft/yii2-swiftmailer": "*",
 
         "amnah/yii2-user": "dev-master",
-        "kartik-v/yii2-widgets": "dev-master"
+        "kartik-v/yii2-widgets": "dev-master",
+
+        "creocoder/yii2-nested-set-behavior": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",

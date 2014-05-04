@@ -54,4 +54,50 @@ class TestController extends Controller
     }
 
 
+    public function actionIframe(){
+
+       return  $this->render('iframe');
+    }
+
+    public function actionIframe2(){
+
+       return  $this->render('iframeAutoHeight');
+    }
+
+    public function actionJson(){
+
+        /*
+        $resp = new \yii\web\Response() ;
+        $resp->data = array(
+            'key'=>1,
+        );
+         $resp->format = \yii\web\Response::FORMAT_JSON ;
+        return  $resp ;
+        */
+        $resp = Yii::$app->getResponse() ;
+         $resp->format = \yii\web\Response::FORMAT_JSON ;
+            $resp->data = array(
+            'key'=>'val',
+        );
+        return $resp;
+    }
+
+    public function actionJson2(){
+
+        /*
+        $resp = new \yii\web\Response() ;
+        $resp->data = array(
+            'key'=>1,
+        );
+         $resp->format = \yii\web\Response::FORMAT_JSON ;
+        return  $resp ;
+        */
+        $resp = Yii::$app->getResponse() ;
+        $resp->format = \yii\web\Response::FORMAT_JSON ;
+
+        return array(
+            'key'=>'val',
+        );
+    }
+
 }

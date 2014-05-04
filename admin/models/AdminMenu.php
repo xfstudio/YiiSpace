@@ -4,6 +4,9 @@ namespace admin\models;
 
 use Yii;
 
+use creocoder\behaviors\NestedSet ;
+use creocoder\behaviors\NestedSetQuery ;
+
 /**
  * This is the model class for table "ys_admin_menu".
  *
@@ -23,6 +26,19 @@ use Yii;
  */
 class AdminMenu extends \yii\db\ActiveRecord
 {
+    public function behaviors() {
+        return [
+            [
+                'class' => NestedSet::className(),
+            ],
+        ];
+    }
+
+    public static function createQuery()
+    {
+        return new AdminMenuQuery(['modelClass' => get_called_class()]);
+    }
+
     /**
      * @inheritdoc
      */
@@ -37,8 +53,10 @@ class AdminMenu extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['root', 'lft', 'rgt', 'level', 'is_visible', 'uid'], 'integer'],
-            [['lft', 'rgt', 'level', 'label'], 'required'],
+           // [['root', 'lft', 'rgt', 'level', 'is_visible', 'uid'], 'integer'],
+            [[ 'is_visible', 'uid'], 'integer'],
+            // [['lft', 'rgt', 'level', 'label'], 'required'],
+            [[ 'label'], 'required'],
             [['params', 'ajaxoptions', 'htmloptions'], 'string'],
             [['label', 'url'], 'string', 'max' => 255],
             [['group_code'], 'string', 'max' => 25]
@@ -67,3 +85,6 @@ class AdminMenu extends \yii\db\ActiveRecord
         ];
     }
 }
+
+
+
