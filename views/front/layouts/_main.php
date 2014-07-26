@@ -1,13 +1,13 @@
 <?php
 use yii\helpers\Html;
 
-use year\foundation\FoundationAsset;
+use year\purecss\PureAsset;
 
 /**
  * @var \yii\web\View $this
  * @var string $content
  */
-FoundationAsset::register($this);
+ PureAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -15,7 +15,7 @@ FoundationAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
@@ -30,9 +30,6 @@ FoundationAsset::register($this);
 </div>
 
 
-<script>
-    $(document).foundation();
-</script>
 
 <?php $this->endBody() ?>
 </body>

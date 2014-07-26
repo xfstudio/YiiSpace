@@ -6,7 +6,19 @@
         in the "<?= $this->context->module->id ?>" module.
     </p>
     <p>
-        You may customize this page by editing the following file:<br>
+        ssssdfffffffffffffffffffffff
+        You may customize this page by editing the following filed:<br>
         <code><?= __FILE__ ?></code>
     </p>
 </div>
+
+<?= year\widgets\UEditor::widget() ?>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container');
+</script>
+
+<!-- 加载编辑器的容器 -->
+<script id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </script>
